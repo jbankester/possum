@@ -5,10 +5,9 @@ interface DrawerProps {
   isOpen: boolean;
   onClose: () => void;
   children: React.ReactNode;
-  width?: string;
 }
 
-const Drawer = ({ isOpen, onClose, children, width }: DrawerProps) => {
+const Drawer = ({ isOpen, onClose, children }: DrawerProps) => {
   const bodyRef = useRef(document.querySelector("body"));
   const closeOnEsc = (e: KeyboardEvent) => {
     if (e.key === "Escape") {
